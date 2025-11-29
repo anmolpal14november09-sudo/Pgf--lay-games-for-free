@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PGF – Play Games For Free</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #4f46e5;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .grid {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .game {
+      background: #1e293b;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 6px black;
+    }
+
+    .game h3 {
+      margin: 6px 0;
+    }
+
+    button {
+      padding: 8px 14px;
+      background: #22c55e;
+      border: none;
+      color: black;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      border: 0;
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  PGF – Play Games For Free
+</header>
+
+<h2>Click Any Game To Play</h2>
+
+<div class="grid">
+
+  <div class="game">
+    <h3>2048</h3>
+    <button onclick="play('https://play2048.co/')">Play</button>
+  </div>
+
+  <div class="game">
+    <h3>Hextris</h3>
+    <button onclick="play('https://hextris.io/')">Play</button>
+  </div>
+
+  <div class="game">
+    <h3>A Dark Room</h3>
+    <button onclick="play('https://adarkroom.doublespeakgames.com/')">Play</button>
+  </div>
+
+  <div class="game">
+    <h3>Flappy Bird</h3>
+    <button onclick="play('https://flappybird.io/')">Play</button>
+  </div>
+
+  <div class="game">
+    <h3>Slither.io</h3>
+    <button onclick="play('https://slither.io/')">Play</button>
+  </div>
+
+  <div class="game">
+    <h3>Mini Racer</h3>
+    <button onclick="play('https://html5games.com/Game/Mini-Racer')">Play</button>
+  </div>
+
+</div>
+
+<h2>Game Player</h2>
+
+<iframe id="player"></iframe>
+
+<script>
+  function play(url) {
+    document.getElementById("player").src = url;
+  }
+</script>
+
+</body>
+</html>
